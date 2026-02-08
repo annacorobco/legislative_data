@@ -1,3 +1,7 @@
+# Keep output files in repo as they are required as the result of assignment
+# unignore when needed
+# /output
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -145,4 +149,3 @@ pyscript/app/testexport.xlsx
 .vscode
 .DS_Store
 
-/output
