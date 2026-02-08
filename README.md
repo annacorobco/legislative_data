@@ -50,6 +50,11 @@ docker compose up
 docker-compose run --rm processor pytest tests/ -v
 ```
 
+### Run Pylint
+```
+docker-compose run --rm processor pylint src/ --output-format=colorized
+```
+
 ## Data Schema
 
 ### Input Files

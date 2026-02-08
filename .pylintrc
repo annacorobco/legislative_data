@@ -1,0 +1,142 @@
+[MASTER]
+# Python code to execute, usually for sys.path manipulation
+init-hook='import sys; sys.path.append("src")'
+
+# Files or directories to be skipped
+ignore=__pycache__,venv,env,.venv
+
+# Files or directories matching the regex patterns are skipped
+ignore-patterns=
+
+# Pickle collected data for later comparisons
+persistent=yes
+
+# List of plugins (as comma separated values of python modules)
+load-plugins=
+
+# Minimum Python version
+py-version=3.11
+
+[MESSAGES CONTROL]
+# Disable specific messages
+disable=
+    missing-module-docstring,
+    missing-class-docstring,
+    missing-function-docstring,
+    too-few-public-methods,
+    too-many-arguments,
+    too-many-locals,
+    too-many-branches,
+    too-many-statements,
+    import-outside-toplevel,
+    consider-using-f-string,
+    fixme
+
+# Enable specific messages
+enable=
+    unused-import,
+    unused-variable,
+    undefined-variable,
+    import-error,
+    no-name-in-module
+
+[FORMAT]
+# Maximum number of characters on a single line
+max-line-length=120
+
+# Regexp for a line that is allowed to be longer than the limit
+ignore-long-lines=^\s*(#|import|from)
+
+# Number of spaces of indent required inside a hanging or continued line
+indent-after-paren=4
+
+# String used as indentation unit
+indent-string='    '
+
+# Expected format of line ending
+expected-line-ending-format=
+
+[BASIC]
+# Good variable names
+good-names=i,j,k,ex,Run,_,df,id
+
+# Bad variable names
+bad-names=foo,bar,baz,toto,tutu,tata
+
+# Include a hint for the correct naming format with invalid-name
+include-naming-hint=yes
+
+# Regular expression matching correct argument names
+argument-naming-style=snake_case
+
+# Regular expression matching correct attribute names
+attr-naming-style=snake_case
+
+# Regular expression matching correct class names
+class-naming-style=PascalCase
+
+# Regular expression matching correct constant names
+const-naming-style=UPPER_CASE
+
+# Regular expression matching correct function names
+function-naming-style=snake_case
+
+# Regular expression matching correct method names
+method-naming-style=snake_case
+
+# Regular expression matching correct module names
+module-naming-style=snake_case
+
+# Regular expression matching correct variable names
+variable-naming-style=snake_case
+
+[DESIGN]
+# Maximum number of arguments for function / method
+max-args=7
+
+# Maximum number of attributes for a class
+max-attributes=10
+
+# Maximum number of boolean expressions in an if statement
+max-bool-expr=5
+
+# Maximum number of branch for function / method body
+max-branches=15
+
+# Maximum number of locals for function / method body
+max-locals=20
+
+# Maximum number of parents for a class
+max-parents=7
+
+# Maximum number of public methods for a class
+max-public-methods=25
+
+# Maximum number of return / yield for function / method body
+max-returns=8
+
+# Maximum number of statements in function / method body
+max-statements=60
+
+# Minimum number of public methods for a class
+min-public-methods=0
+
+[IMPORTS]
+# Allow wildcard imports from modules that define __all__
+allow-wildcard-with-all=no
+
+# Analyse import fallback blocks
+analyse-fallback-blocks=no
+
+# Force import order to recognize a module as part of the standard library
+known-standard-library=
+
+# Force import order to recognize a module as part of a third party library
+known-third-party=pandas,pydantic,pytest
+
+[REFACTORING]
+# Maximum number of nested blocks for function / method body
+max-nested-blocks=5
+
+# Complete name of functions that never return
+never-returning-functions=sys.exit
