@@ -8,5 +8,6 @@ services:
       - ./data:/app/data
       - ./output:/app/output
       - ./src:/app/src   # for development, to avoid rebuilding the image on every change
+      - ./tests:/app/tests
     environment:
       - PYTHONUNBUFFERED=1

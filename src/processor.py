@@ -28,6 +28,12 @@ def calculate_legislator_votes(
         Vote.Cols.bill_id
     ].nunique().unstack(fill_value=0).reset_index()
 
+    # Ensure both vote_type columns exist (1 and 2)
+    if 1 not in counts.columns:
+        counts[1] = 0
+    if 2 not in counts.columns:
+        counts[2] = 0
+
     # Rename columns: 1 -> num_supported_bills, 2 -> num_opposed_bills
     counts.columns = [Person.Cols.id, 'num_supported_bills', 'num_opposed_bills']
 
@@ -67,6 +73,12 @@ def calculate_bill_votes(
     counts = vote_results_with_bills.groupby([Vote.Cols.bill_id, VoteResult.Cols.vote_type])[
         VoteResult.Cols.legislator_id
     ].nunique().unstack(fill_value=0).reset_index()
+
+    # Ensure both vote_type columns exist (1 and 2)
+    if 1 not in counts.columns:
+        counts[1] = 0
+    if 2 not in counts.columns:
+        counts[2] = 0
 
     # Rename columns: 1 -> supporter_count, 2 -> opposer_count
     counts.columns = [Bill.Cols.id, BillVoteSummary.Cols.supporter_count, BillVoteSummary.Cols.opposer_count]

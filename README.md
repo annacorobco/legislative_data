@@ -44,6 +44,12 @@ docker compose build
 ```
 docker compose up
 ```
+
+### Run Tests
+```
+docker-compose run --rm processor pytest tests/ -v
+```
+
 ## Data Schema
 
 ### Input Files
