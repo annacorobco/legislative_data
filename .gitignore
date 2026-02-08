@@ -144,3 +144,5 @@ pyscript/app/testexport.xlsx
 
 .vscode
 .DS_Store
+
+/output
