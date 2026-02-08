@@ -1,0 +1,12 @@
+services:
+  processor:
+    build: .
+    user: "${UID}:${GID}"   # run, if needed: export UID=$(id -u) and export GID=$(id -g)
+    image: legislative-data-processor:latest
+    container_name: legislative-data-processor
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+      - ./src:/app/src   # for development, to avoid rebuilding the image on every change
+    environment:
+      - PYTHONUNBUFFERED=1
